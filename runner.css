@@ -1,0 +1,237 @@
+/* Runner account, using the same typography and palette as the public race studio. */
+.runner-body {
+  --r-border: #d2d8cd;
+  --r-soft: #f0f1e9;
+  --r-radius: 14px;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.runner-body [hidden] { display: none !important; }
+.runner-body .r-shell { width: min(100% - clamp(32px, 9vw, 136px), 1260px); margin-inline: auto; }
+.runner-body main.r-shell { flex: 1; padding-block: clamp(24px, 4.5vw, 72px); }
+.runner-body .r-mast {
+  background: var(--deep);
+  color: var(--paper);
+}
+.runner-body .r-mast .r-shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 70px;
+}
+.runner-body .r-mast a:not(.brand-link) { display: inline-flex; min-height: 44px; align-items: center; font-size: 14px; }
+.runner-body .r-mast a:hover { color: var(--lime); }
+.runner-body .r-mast a:focus-visible { outline-color: var(--lime); }
+.runner-body .r-welcome {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  border: 1px solid var(--r-border);
+  background: #fffefa;
+  border-radius: 20px;
+  overflow: clip;
+}
+.runner-body .r-cover {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(30px, 4.2vw, 72px);
+  color: var(--paper);
+  background: #152419;
+}
+.runner-body .r-kicker {
+  margin: 0;
+  color: #415444;
+  font: 400 11px/1.6 var(--mono);
+  text-transform: uppercase;
+  letter-spacing: .11em;
+}
+.runner-body .r-cover .r-kicker { color: var(--lime); }
+.runner-body .r-cover h1, .runner-body .r-heading h1, .runner-body .r-heading h2 {
+  margin-block: 15px 16px;
+  font: 700 clamp(48px, 5.6vw, 85px)/.99 var(--display);
+  letter-spacing: -.073em;
+}
+.runner-body .r-cover h1 em, .runner-body .r-heading em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+.runner-body .r-cover h1 em { color: var(--lime); }
+.runner-body .r-cover > p:not(.r-kicker) { max-width: 36ch; color: #d2dbce; line-height: 1.6; }
+.runner-body .r-emblem {
+  position: relative;
+  width: min(85%, 320px);
+  aspect-ratio: 2.35;
+  margin-block: clamp(25px, 3.6vw, 54px) 0;
+  align-self: flex-end;
+  overflow: hidden;
+  mix-blend-mode: screen;
+}
+.runner-body .r-emblem img { position: absolute; width: 118.52%; max-width: none; height: auto; left: -10.2%; top: -91.3%; }
+.runner-body .r-rule {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-block: 20px;
+  background: #61775c;
+}
+.runner-body .r-form-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(30px, 4.4vw, 68px);
+}
+.runner-body .r-form-card h2, .runner-body .r-panel h2, .runner-body .r-log h2 {
+  font-size: clamp(27px, 3vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -.058em;
+}
+.runner-body .r-form-card h2 + p { margin-top: 10px; color: var(--muted); }
+.runner-body .r-form-card h2 { margin-block: 7px 0; }
+.runner-body .r-form-card form { margin-top: 20px; }
+.runner-body label { display: block; margin-block: 15px 5px; color: #28392b; font-size: 14px; font-weight: 500; }
+.runner-body input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 10px 13px;
+  color: #17271c;
+  background: #fff;
+  caret-color: var(--teal);
+  border: 1px solid #879584;
+  border-radius: 7px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.runner-body input::placeholder { color: #5a685c; opacity: 1; }
+.runner-body .r-password { display: flex; align-items: stretch; gap: 0; }
+.runner-body .r-password input { flex: 1; border-radius: 7px 0 0 7px; }
+.runner-body .r-password button {
+  flex-shrink: 0;
+  min-width: 55px;
+  padding-inline: 8px;
+  background: var(--r-soft);
+  color: var(--ink);
+  border: 1px solid #879584;
+  border-left: 0;
+  border-radius: 0 7px 7px 0;
+  font-size: 13px;
+}
+.runner-body .r-password button:hover { background: #e1e7dc; }
+.runner-body input:focus-visible, .runner-body button:focus-visible, .runner-body a:focus-visible { outline-offset: 2px; }
+.runner-body .r-primary, .runner-body .r-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 11px 19px;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  color: var(--deep);
+  background: var(--lime);
+  line-height: 1.4;
+  font-weight: 500;
+}
+.runner-body .r-form-card .r-primary { width: 100%; margin-top: 20px; }
+.runner-body .r-primary:hover { background: #c6ef72; }
+.runner-body button:disabled { cursor: wait; opacity: .65; }
+.runner-body .r-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 3px 0;
+  border: 0;
+  background: transparent;
+  color: #17604c;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  font-size: 14px;
+}
+.runner-body .r-link:hover { color: var(--ink); }
+.runner-body .r-message:not(:empty) { margin-top: 12px; line-height: 1.5; font-size: 14px; }
+.runner-body .r-message[role=alert]:not(:empty) { color: #913623; }
+.runner-body .r-state { padding-block: 48px; color: var(--muted); }
+.runner-body .r-muted { color: var(--muted); }
+.runner-body .r-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+.runner-body .r-heading > div { min-width: 0; }
+.runner-body .r-heading h1, .runner-body .r-heading h2 { overflow-wrap: anywhere; }
+.runner-body .r-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.runner-body .r-actions button { color: var(--ink); background: transparent; border-color: #859480; font-size: 14px; }
+.runner-body .r-actions button:hover { background: #e8eddf; }
+.runner-body .r-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(165px, 100%), 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border-radius: var(--r-radius);
+  background: #4e5d4d;
+  margin-block: clamp(20px, 3vw, 40px);
+}
+.runner-body .r-stat { min-width: 0; padding: clamp(18px, 2.6vw, 36px); background: #1c2c20; color: var(--paper); }
+.runner-body .r-stat:first-child { background: var(--lime); color: var(--deep); }
+.runner-body .r-stat small { display: block; font: 400 11px/1.5 var(--mono); text-transform: uppercase; letter-spacing: .065em; }
+.runner-body .r-stat strong { display: block; margin-top: 8px; font: 500 clamp(27px, 3.2vw, 50px)/1.1 var(--display); letter-spacing: -.058em; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.runner-body .r-grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: clamp(16px, 2vw, 32px); align-items: start; }
+.runner-body .r-side { display: grid; gap: 16px; min-width: 0; }
+.runner-body .r-panel, .runner-body .r-log {
+  min-width: 0;
+  border: 1px solid var(--r-border);
+  border-radius: var(--r-radius);
+  padding: clamp(17px, 2.3vw, 32px);
+  background: #fffefa;
+}
+.runner-body .r-panel h2, .runner-body .r-log h2 { margin-block: 6px 12px; font-size: clamp(24px, 2.1vw, 32px); }
+.runner-body .r-panel h3, .runner-body .r-log h3 { font-size: 17px; line-height: 1.35; letter-spacing: -.025em; }
+.runner-body .r-activity {
+  display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: 12px;
+  padding-block: 15px; border-top: 1px solid var(--r-border); overflow-wrap: anywhere;
+}
+.runner-body .r-activity > div { min-width: 0; }
+.runner-body .r-activity > div:first-child { display: grid; gap: 3px; }
+.runner-body .r-activity > div:first-child strong { font: 700 17px/1.3 var(--display); letter-spacing: -.025em; }
+.runner-body .r-activity small, .runner-body .r-activity time { color: var(--muted); font-size: 13px; }
+.runner-body .r-log ol { margin: 16px 0 0; padding: 0; list-style: none; }
+.runner-body .r-metrics { display: flex; gap: 4px 14px; flex-wrap: wrap; align-items: baseline; font: 400 12px/1.5 var(--mono); color: #345440; }
+.runner-body .r-metrics span { display: grid; gap: 3px; }
+.runner-body .r-metrics small { font: 400 10px/1.4 var(--mono); text-transform: uppercase; letter-spacing: .04em; }
+.runner-body .r-metrics b { font-weight: 500; }
+.runner-body .r-pairs { margin: 12px 0 0; }
+.runner-body .r-pairs > div { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding-block: 10px; border-top: 1px solid var(--r-border); }
+.runner-body .r-pairs dt { color: var(--muted); font-size: 14px; }
+.runner-body .r-pairs dd { min-width: 0; margin: 0; text-align: right; overflow-wrap: anywhere; font-weight: 500; font-variant-numeric: tabular-nums; }
+.runner-body .r-profile, .runner-body .r-rankings { overflow-wrap: anywhere; }
+.runner-body .r-footer {
+  color: var(--muted); border-top: 1px solid var(--r-border); font-size: 13px;
+}
+.runner-body .r-footer .r-shell {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 4px 20px; padding-block: 16px;
+}
+.runner-body .r-footer span { margin-right: auto; }
+.runner-body .r-footer a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: .2em; }
+@media (max-width: 760px) {
+  .runner-body .r-welcome, .runner-body .r-grid { grid-template-columns: minmax(0, 1fr); }
+  .runner-body .r-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .runner-body .r-cover { padding: clamp(23px, 5vw, 38px); }
+  .runner-body .r-cover h1 { margin-block: 10px; font-size: clamp(40px, 10vw, 68px); }
+  .runner-body .r-emblem { position: absolute; z-index: -1; right: -8%; bottom: 0; margin: 0; width: 48%; opacity: .12; }
+  .runner-body .r-rule { display: none; }
+  .runner-body .r-form-card { padding: clamp(22px, 5vw, 38px); }
+  .runner-body .r-mast .r-shell { min-height: 58px; }
+  .runner-body .r-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .runner-body .r-stat { padding: 15px; }
+  .runner-body .r-stat:first-child:nth-last-child(odd) { grid-column: 1 / -1; }
+}
+@media (forced-colors: active) {
+  .runner-body :is(.r-primary, .r-stat, .r-password button) { border: 1px solid ButtonText; }
+}

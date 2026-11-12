@@ -1,0 +1,61 @@
+.cs-workspace { --cs-paper:var(--paper,#fafaf6);--cs-ink:var(--ink,#18291e);--cs-card:#fffefa;--cs-muted:#536555;--cs-line:#d2dacd;--cs-lane:#e6efda;--cs-leaf:#183b27;color:var(--cs-ink);min-width:0 }
+.cs-workspace [hidden]{display:none!important}
+.cs-workspace :is(h3,h4,p,ol,ul){margin:0}
+.cs-workspace button{font-family:inherit;color:inherit}
+.cs-workspace button:disabled{opacity:.6;cursor:wait}
+.cs-workspace :is(button,input,textarea,select):focus-visible{outline:3px solid #17745b;outline-offset:2px}
+.cs-workspace .cs-tabs,.cs-workspace .cs-filters,.cs-workspace .cs-actions,.cs-workspace .cs-heading,.cs-workspace .cs-byline{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.cs-workspace .cs-tabs{border-bottom:1px solid var(--cs-line);margin-bottom:24px;gap:3px 18px}
+.cs-workspace .cs-tab{background:transparent;border:0;border-bottom:3px solid transparent;padding:11px 2px;min-height:44px;color:var(--cs-muted);font-weight:500}
+.cs-workspace .cs-tab[aria-current=page]{border-color:var(--cs-leaf);color:var(--cs-leaf)}
+.cs-workspace .cs-content{display:grid;gap:16px;min-width:0}
+.cs-workspace .cs-heading,.cs-workspace .cs-byline{justify-content:space-between}
+.cs-workspace .cs-heading h3{font:700 clamp(25px,3vw,38px)/1.1 var(--display,'Space Grotesk',sans-serif);letter-spacing:-.055em}
+.cs-workspace .cs-card{border:1px solid var(--cs-line);border-radius:17px;background:var(--cs-card);padding:clamp(18px,3vw,32px);min-width:0;overflow-wrap:anywhere}
+.cs-workspace .cs-card h3,.cs-workspace .cs-extra h3{font:700 clamp(20px,2.1vw,28px)/1.15 var(--display,'Space Grotesk',sans-serif);letter-spacing:-.045em}
+.cs-workspace .cs-card>*+*{margin-top:12px}
+.cs-workspace .cs-hint,.cs-workspace .cs-clamp{color:var(--cs-muted);font-size:14px;line-height:1.55}
+.cs-workspace .cs-chip,.cs-workspace .cs-micro{font:400 11px/1.4 var(--mono,monospace);color:var(--cs-muted)}
+.cs-workspace .cs-chip{display:inline-flex;align-items:center;padding:4px 10px;border-radius:100px;background:var(--cs-lane);color:var(--cs-leaf);width:fit-content}
+.cs-workspace .cs-button,.cs-workspace .cs-soft,.cs-workspace .cs-text{display:inline-flex;align-items:center;justify-content:center;min-height:40px;border-radius:100px;padding:7px 15px;background:var(--cs-card);border:1px solid #9eaf9a;font-weight:500;font-size:13px;line-height:1.3;text-align:center}
+.cs-workspace .cs-button:hover,.cs-workspace .cs-soft:hover{background:var(--cs-lane)}
+.cs-workspace .cs-button.cs-primary{background:#d5fa85;color:#19341d;border-color:#c4df82}
+.cs-workspace .cs-primary:hover{background:#c9ed7d}
+.cs-workspace .cs-soft{background:#f0f3e9;border-color:transparent}
+.cs-workspace .cs-soft[aria-pressed=true]{background:var(--cs-leaf);color:#fff}
+.cs-workspace .cs-text{padding:5px 3px;border:0;color:#24624b;text-decoration:underline;text-underline-offset:.24em;background:transparent}
+.cs-workspace .cs-feed,.cs-workspace .cs-inbox,.cs-workspace .cs-composer,.cs-workspace .cs-extra{display:grid;gap:12px;min-width:0}
+.cs-workspace .cs-extra:empty,.cs-workspace .cs-status:empty{display:none}
+.cs-workspace .cs-status{color:var(--cs-leaf);font-size:14px;margin-block:8px}
+.cs-workspace .cs-feed{max-width:940px}
+.cs-workspace .cs-identity{display:inline-flex;align-items:center;gap:10px;text-align:left;background:transparent;border:0;padding:1px;min-height:44px;min-width:0;max-width:100%;overflow-wrap:anywhere}
+.cs-workspace .cs-identity span:not(.cs-avatar),.cs-workspace .cs-next{display:grid;gap:1px;text-align:left}
+.cs-workspace .cs-identity small,.cs-workspace .cs-convo-copy span{font-size:13px;color:var(--cs-muted)}
+.cs-workspace .cs-avatar{width:42px;height:42px;flex:0 0 42px;border-radius:50%;display:inline-grid;place-items:center;color:#183129;background:#d0ece2;font:700 14px var(--display, sans-serif)}
+.cs-workspace .cs-tone-1{background:#e1eacb;color:#354b22}.cs-workspace .cs-tone-2{background:#fae4ce;color:#633b24}.cs-workspace .cs-tone-3{background:#e8e0f0;color:#463357}
+.cs-workspace .cs-metrics{display:flex;align-items:start;flex-wrap:wrap;gap:12px 28px;border-block:1px solid var(--cs-line);padding-block:13px}
+.cs-workspace .cs-metrics small,.cs-workspace .cs-metrics strong{display:block}.cs-workspace .cs-metrics small{color:var(--cs-muted);font-size:11px}.cs-workspace .cs-metrics strong{font:500 19px var(--display,sans-serif);font-variant-numeric:tabular-nums}
+.cs-workspace .cs-report{font-size:12px}.cs-workspace .cs-report .cs-text{font-size:12px;min-height:34px}
+.cs-workspace .cs-comment{padding:14px;border-radius:12px;background:#f3f5ee}.cs-workspace .cs-comment p,.cs-workspace .cs-bubble span{white-space:pre-wrap;overflow-wrap:anywhere}
+.cs-workspace .cs-field{display:block;padding:11px 13px;border:1px solid #93a28c;border-radius:8px;min-height:44px;min-width:0;width:100%;background:var(--cs-card);color:var(--cs-ink);font:inherit;font-size:16px}
+.cs-workspace .cs-field::placeholder{color:#5a695b}
+.cs-workspace .cs-composer .cs-button,.cs-workspace .cs-content>.cs-button{justify-self:start}
+.cs-workspace .cs-rules{padding-left:22px}
+.cs-workspace .cs-consent{display:flex;align-items:center;gap:8px;font-size:14px}
+.runner-body .cs-workspace .cs-consent input{width:20px;height:20px;min-height:20px;flex:none}
+.cs-workspace .cs-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,238px),1fr));gap:13px}
+.cs-workspace .cs-challenge,.cs-workspace .cs-club{display:flex;flex-direction:column;align-items:start;gap:10px}
+.cs-workspace .cs-challenge>*,.cs-workspace .cs-club>*{margin:0}
+.cs-workspace .cs-challenge>.cs-button,.cs-workspace .cs-club>.cs-button{margin-top:auto}
+.cs-workspace .cs-progress{width:100%;height:6px;accent-color:#387c54}
+.cs-workspace .cs-search,.cs-workspace .cs-conversation{display:flex;align-items:center;gap:12px}
+.cs-workspace .cs-conversation{background:var(--cs-card);border:1px solid var(--cs-line);border-radius:14px;padding:15px;width:100%;min-width:0;text-align:left}.cs-workspace .cs-conversation:hover{border-color:#8aaa85}
+.cs-workspace .cs-convo-copy{flex:1;min-width:0;display:grid}.cs-workspace .cs-convo-copy :is(strong,span){overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.cs-workspace .cs-convo-end{display:grid;justify-items:end;gap:4px;text-align:right}
+.cs-workspace .cs-chat{padding:18px;list-style:none;background:#eef2e9;border-radius:16px;display:flex;flex-direction:column;align-items:start;gap:9px;max-height:64vh;min-height:110px;overflow-y:auto}
+.cs-workspace .cs-bubble{display:grid;gap:4px;max-width:min(80%,620px);padding:12px 15px;border-radius:16px 16px 16px 3px;background:white;box-shadow:0 1px 2px #26402114}
+.cs-workspace .cs-bubble small{font-size:10px;color:var(--cs-muted)}.cs-workspace .cs-outgoing{align-self:flex-end;background:#dafa9c;border-radius:16px 16px 3px 16px}
+@media(max-width:540px){.cs-workspace .cs-tabs{gap:0 9px}.cs-workspace .cs-tab{font-size:13px}.cs-workspace .cs-chat{padding:10px}.cs-workspace .cs-convo-end small{font-size:9px}.cs-workspace .cs-conversation{gap:8px;padding:12px}.cs-workspace .cs-search{flex-wrap:wrap}}
+.cs-workspace .cs-event-results:not(:empty){margin-top:18px}
+.cs-workspace .cs-finishes{list-style:none;padding:0}
+.cs-workspace .cs-finishes li{display:grid;grid-template-columns:40px 1fr auto;align-items:center;gap:8px;padding:3px 8px;border-bottom:1px solid var(--cs-line);font-variant-numeric:tabular-nums}
+.cs-workspace .cs-finishes button{justify-self:start;max-width:100%;overflow-wrap:anywhere}

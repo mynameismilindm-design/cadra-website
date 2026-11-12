@@ -1,0 +1,8 @@
+.cv-workspace .cv-content{display:grid;gap:16px;margin-top:18px}
+.cv-workspace .cv-form{max-width:790px;display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+.cv-workspace .cv-form>*{margin:0}
+.cv-workspace .cv-form>:is(h3,p,.cs-consent),.cv-workspace .cv-field:has(textarea){grid-column:1/-1}
+.cv-workspace .cv-field{display:grid;align-content:start;gap:5px;font-size:14px;font-weight:550}
+.cv-workspace .cs-button,.cv-workspace .cs-text{justify-self:start}
+.cv-workspace .cv-status-card h3{margin-top:6px}
+@media(max-width:620px){.cv-workspace .cv-form{grid-template-columns:1fr}}

@@ -1,0 +1,71 @@
+.iphone-release {
+  padding-bottom: clamp(30px, 4vw, 60px);
+}
+
+.iphone-release__inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.2vw, 32px);
+  padding: clamp(22px, 2.8vw, 38px) 0 0;
+  border-top: 1px solid #f5ffe62e;
+}
+
+.iphone-release__copy p {
+  margin: 0 0 6px;
+  color: var(--lime);
+  font: 500 11px/1.4 var(--mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.iphone-release__copy h3 {
+  margin: 0;
+  color: #f8faf1;
+  font: 500 clamp(23px, 3vw, 44px)/1.12 var(--display);
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+
+.iphone-release__device {
+  position: relative;
+  flex: 0 0 auto;
+  width: clamp(34px, 3.7vw, 50px);
+  aspect-ratio: 1 / 1.72;
+  overflow: hidden;
+  transform: rotate(-6deg);
+  border: 2px solid #a0b099;
+  border-radius: 22% / 13%;
+  background: #1c2b20;
+}
+
+.iphone-release__island {
+  position: absolute;
+  inset: 7% 34% auto;
+  height: 5%;
+  border-radius: 10px;
+  background: #9aab90;
+}
+
+.iphone-release__lanes {
+  position: absolute;
+  top: 46%;
+  left: -28%;
+  width: 145%;
+  height: 24%;
+  border-block: 1px solid #a4ba8b;
+  transform: rotate(-26deg);
+}
+
+.iphone-release__lanes::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 39%;
+  margin: 6% 0 0 39%;
+  border-radius: 2px;
+  background: var(--lime);
+}
+
+.iphone-note{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.35em;min-height:36px;margin-top:6px;color:#c6d1c2;font-size:12px}
+.iphone-note span{color:#edf4e5;text-decoration:underline;text-decoration-color:#768773;text-underline-offset:.25em}
+.iphone-note:hover span{color:var(--lime)}
